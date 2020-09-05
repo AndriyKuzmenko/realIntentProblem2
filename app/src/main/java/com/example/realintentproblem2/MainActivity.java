@@ -30,4 +30,9 @@ public class MainActivity extends AppCompatActivity
         etB.setText(""+myRandom.nextInt());
         etC.setText(""+myRandom.nextInt());
     }
+
+    public void showResult(View view)
+    {
+        //
+    }
 }
