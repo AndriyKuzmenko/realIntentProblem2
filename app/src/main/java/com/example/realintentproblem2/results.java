@@ -44,13 +44,20 @@ public class results extends AppCompatActivity
         double d=b*b-4*a*c;
         if (d<0)
         {
-            answer.setText("This equation doesn't have solutions because D<0. (D="+d+")");
+            answer.setText("This equation doesn't have solutions because D<0. (D="+d+").");
             return;
         }
         if (d==0)
         {
             double x=(-b)/(2*a);
             answer.setText("This equation has just 1 solution because D=0. The only solution is "+x+".");
+            return;
+        }
+        if (d>0)
+        {
+            double x1=(-b+d)/(2*a);
+            double x2=(-b-d)/(2*a);
+            answer.setText("This equation has 2 solutions because d>0. (D="+d+"). x1="+x1+" and x2="+x2);
         }
     }
 
