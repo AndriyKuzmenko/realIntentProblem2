@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity
     EditText etA, etB, etC;
     Random myRandom;
     double a,b,c;
+    String aS,bS,cS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,7 +36,13 @@ public class MainActivity extends AppCompatActivity
 
     public void showResult(View view)
     {
-        //
+        aS=etA.getText().toString();
+        bS=etB.getText().toString();
+        cS=etC.getText().toString();
+        if (!(check(aS) && check(bS) && check(cS))) return;
+        a=Double.parseDouble(aS);
+        b=Double.parseDouble(bS);
+        c=Double.parseDouble(cS);
     }
 
     public boolean check(String x)
