@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity
 
     public void randomNumbers(View view)
     {
-        etA.setText(""+myRandom.nextDouble());
-        etB.setText(""+myRandom.nextDouble());
-        etC.setText(""+myRandom.nextDouble());
+        etA.setText(""+myRandom.nextInt());
+        etB.setText(""+myRandom.nextInt());
+        etC.setText(""+myRandom.nextInt());
     }
 }
