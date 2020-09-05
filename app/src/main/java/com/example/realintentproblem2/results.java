@@ -45,6 +45,12 @@ public class results extends AppCompatActivity
         if (d<0)
         {
             answer.setText("This equation doesn't have solutions because D<0. (D="+d+")");
+            return;
+        }
+        if (d==0)
+        {
+            double x=(-b)/(2*a);
+            answer.setText("This equation has just 1 solution because D=0. The only solution is "+x+".");
         }
     }
 
