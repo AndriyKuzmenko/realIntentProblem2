@@ -32,7 +32,7 @@
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#030F55"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <Space
         android:layout_width="match_parent"
