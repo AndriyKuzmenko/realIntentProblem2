@@ -1,7 +1,6 @@
-package com.example.intentproblem2;
+package com.example.realintentproblem2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.EditText;
 
