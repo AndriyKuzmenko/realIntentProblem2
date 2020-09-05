@@ -3,6 +3,7 @@ package com.example.realintentproblem2;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
@@ -59,6 +60,11 @@ public class results extends AppCompatActivity
             double x2=(-b-d)/(2*a);
             answer.setText("This equation has 2 solutions because d>0. (D="+d+"). x1="+x1+" and x2="+x2);
         }
+    }
+
+    public void back(View view)
+    {
+        finish();
     }
 
     private class myWV extends WebViewClient
