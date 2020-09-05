@@ -1,6 +1,8 @@
 package com.example.realintentproblem2;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity
     Random myRandom;
     double a,b,c;
     String aS,bS,cS;
+    Intent si;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity
         etB=(EditText)findViewById(R.id.etB);
         etC=(EditText)findViewById(R.id.etC);
         myRandom=new Random();
+        si=new Intent(this, results.class);
     }
 
     public void randomNumbers(View view)
@@ -43,6 +47,10 @@ public class MainActivity extends AppCompatActivity
         a=Double.parseDouble(aS);
         b=Double.parseDouble(bS);
         c=Double.parseDouble(cS);
+        si.putExtra("a",a);
+        si.putExtra("b",b);
+        si.putExtra("c",c);
+        startActivity(si);
     }
 
     public boolean check(String x)
