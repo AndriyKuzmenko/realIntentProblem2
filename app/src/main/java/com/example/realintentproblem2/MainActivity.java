@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity
 {
     EditText etA, etB, etC;
     Random myRandom;
+    double a,b,c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -34,5 +36,19 @@ public class MainActivity extends AppCompatActivity
     public void showResult(View view)
     {
         //
+    }
+
+    public boolean check(String x)
+    {
+        try
+        {
+            double d = Double.parseDouble(x);
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(getApplicationContext(), "Type a number!!!!!!!!!!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 }
