@@ -1,14 +1,15 @@
 package com.example.realintentproblem2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.webkit.WebView;
 
 public class results extends AppCompatActivity
 {
     Intent gi;
     double a,b,c;
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,5 +24,6 @@ public class results extends AppCompatActivity
         //Because the code checks are the numbers correct
         //before sending them, the default value doesn't
         //matter.
+        webView=(WebView)findViewById(R.id.webView);
     }
 }
