@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 public class results extends AppCompatActivity
 {
     Intent gi;
     double a,b,c;
     WebView webView;
+    TextView answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +28,7 @@ public class results extends AppCompatActivity
         //before sending them, the default value doesn't
         //matter.
         webView=(WebView)findViewById(R.id.webView);
+        answer=(TextView)findViewById(R.id.answer);
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new myWV());
@@ -54,6 +57,15 @@ public class results extends AppCompatActivity
 
         equation+=c;
         webView.loadUrl(equation);
+    }
+
+    public void calculate()
+    {
+        double d=b*b-4*a*c;
+        if (d<0)
+        {
+            answer.setText("This equation doesn't have solutions because D<0. (D="+d+")");
+        }
     }
 
     private class myWV extends WebViewClient
