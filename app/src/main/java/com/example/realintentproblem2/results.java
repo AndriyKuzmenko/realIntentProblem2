@@ -22,8 +22,8 @@ public class results extends AppCompatActivity
 
         gi=getIntent();
         a=gi.getDoubleExtra("a",0);
-        b=gi.getDoubleExtra("a",0);
-        c=gi.getDoubleExtra("a",0);
+        b=gi.getDoubleExtra("b",0);
+        c=gi.getDoubleExtra("c",0);
         //Because the code checks are the numbers correct
         //before sending them, the default value doesn't
         //matter.
