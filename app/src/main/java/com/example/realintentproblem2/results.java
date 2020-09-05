@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class results extends AppCompatActivity
 {
@@ -28,5 +29,14 @@ public class results extends AppCompatActivity
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new myWV());
+    }
+
+    private class myWV extends WebViewClient
+    {
+        public boolean shouldOverideUrlLoading(WebView view, String url)
+        {
+            view.loadUrl(url);
+            return true;
+        }
     }
 }
