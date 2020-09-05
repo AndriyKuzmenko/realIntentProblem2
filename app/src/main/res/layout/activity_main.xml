@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:fontFamily="serif"
-                android:inputType="numberDecimal"
+                android:inputType="numberDecimal|numberSigned|number"
                 android:textColor="#07145E"
                 android:textSize="17sp" />
 
@@ -91,7 +91,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:fontFamily="serif"
-                android:inputType="numberDecimal"
+                android:inputType="numberDecimal|numberSigned|number"
                 android:textColor="#07145E"
                 android:textSize="17sp" />
 
@@ -102,7 +102,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:fontFamily="serif"
-                android:inputType="numberDecimal"
+                android:inputType="numberDecimal|numberSigned|number"
                 android:textColor="#07145E"
                 android:textSize="17sp" />
         </LinearLayout>
