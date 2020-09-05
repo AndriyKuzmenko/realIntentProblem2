@@ -25,5 +25,8 @@ public class results extends AppCompatActivity
         //before sending them, the default value doesn't
         //matter.
         webView=(WebView)findViewById(R.id.webView);
+
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.setWebViewClient(new myWV());
     }
 }
