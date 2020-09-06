@@ -56,8 +56,8 @@ public class results extends AppCompatActivity
         }
         if (d>0)
         {
-            double x1=(-b+d)/(2*a);
-            double x2=(-b-d)/(2*a);
+            double x1=(-b+Math.sqrt(d))/(2*a);
+            double x2=(-b-Math.sqrt(d))/(2*a);
             answer.setText("This equation has 2 solutions because d>0. (D="+d+"). x1="+x1+" and x2="+x2);
         }
     }
