@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         }
         catch (NumberFormatException nfe)
         {
-            Toast.makeText(getApplicationContext(), "You forgot to type "+ch+"!!!!!!!!!!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "You forgot to give the value of "+ch+"!!!!!!!!!!!!!!!!!!", Toast.LENGTH_LONG).show();
             return false;
         }
         return true;
