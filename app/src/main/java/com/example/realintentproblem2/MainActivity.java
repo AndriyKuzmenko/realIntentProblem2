@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         aS=etA.getText().toString();
         bS=etB.getText().toString();
         cS=etC.getText().toString();
-        if (!(check(aS) && check(bS) && check(cS))) return;
+        if (!(check(aS,'a') && check(bS,'b') && check(cS,'c'))) return;
         a=Double.parseDouble(aS);
         b=Double.parseDouble(bS);
         c=Double.parseDouble(cS);
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         startActivity(si);
     }
 
-    public boolean check(String x)
+    public boolean check(String x,char ch)
     {
         try
         {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         }
         catch (NumberFormatException nfe)
         {
-            Toast.makeText(getApplicationContext(), "Type a number!!!!!!!!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "You forgot to type "+ch+"!!!!!!!!!!!!", Toast.LENGTH_LONG).show();
             return false;
         }
         return true;
